@@ -1,0 +1,83 @@
+<!-- approach.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iogate — approach</title>
+  <meta name="description" content="IOGate approach — structured, pragmatic delivery with security, cost control and long-term sustainability built in." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <h1 class="logo"><span class="io">io</span>gate</h1>
+
+    <p class="tagline">
+      Calm, structured delivery. We build foundations that remain stable as complexity increases —
+      without slowing your team down.
+    </p>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="./index.html">Home</a>
+      <a href="./services.html">Services</a>
+      <a href="./approach.html" aria-current="page"><span class="dot"></span> Approach</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="meta" aria-label="Approach metadata">
+      <span class="pill"><span class="dot"></span> Security-led</span>
+      <span class="pill">Automation-first</span>
+      <span class="pill">Clean handover</span>
+    </div>
+
+    <section class="section" aria-labelledby="a1">
+      <h2 id="a1">How we work</h2>
+      <p>
+        We start by understanding your product roadmap and risk profile, then design and implement cloud foundations that are secure,
+        scalable and easy to operate. We avoid over-engineering, but we also avoid fragile shortcuts.
+      </p>
+
+      <ul class="list">
+        <li class="item">
+          <strong>1) Understand</strong>
+          <span>Clarify goals, constraints, compliance needs, and what “good” looks like at your stage of growth.</span>
+        </li>
+        <li class="item">
+          <strong>2) Design</strong>
+          <span>Define the target architecture and baseline controls (security, identity, networking, observability, cost governance).</span>
+        </li>
+        <li class="item">
+          <strong>3) Build</strong>
+          <span>Implement via Infrastructure as Code and automation, keeping environments repeatable and auditable.</span>
+        </li>
+        <li class="item">
+          <strong>4) Validate</strong>
+          <span>Test assumptions, reduce risk, and ensure the environment is operationally sound (not just “deployed”).</span>
+        </li>
+        <li class="item">
+          <strong>5) Enable</strong>
+          <span>Document, hand over, and leave your team with the confidence to run and extend the platform.</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="cta" aria-label="Call to action">
+      If you want a structured view of what to improve first, start with an Architecture Review.
+      Email <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a>.
+    </div>
+
+    <footer>
+      <span>© <span id="y"></span> iogate</span>
+      <span class="links">
+        <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a>
+      </span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
