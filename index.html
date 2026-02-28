@@ -1,34 +1,80 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iogate</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #403F4C; /* Gunmetal */
-            font-family: 'Courier New', monospace;
-        }
-        .logo {
-            font-size: 4rem;
-        }
-        .logo .io {
-            color: #3185FC; /* Azure Blue */
-        }
-        .logo .gate {
-            color: #ffffff; 
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iogate</title>
+  <meta name="description" content="IOGate — secure cloud foundations, built properly. AWS-led, Azure-capable." />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-    <div class="logo">
-        <span class="io">io</span><span class="gate">gate</span>
+  <main class="wrap">
+    <h1 class="logo"><span class="io">io</span>gate</h1>
+
+    <p class="tagline">
+      Secure cloud foundations, built properly — primarily on AWS, with experience across Azure.
+      We design and implement production-ready environments with security, cost control and long-term scalability built in from day one.
+    </p>
+
+    <nav class="nav" aria-label="navigation">
+      <a href="./index.html" aria-current="page"><span class="dot"></span> Home</a>
+      <a href="./services.html">Services</a>
+      <a href="./approach.html">Approach</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="meta" aria-label="our focuses">
+      <span class="pill">UK • Private sector</span>
+      <span class="pill">AWS-led • Azure-capable</span>
+      <span class="pill">Secure by design</span>
+      <span class="pill">Focused engagements • Senior-led</span>
     </div>
+
+    <section class="section" aria-labelledby="who we work with">
+      <h2 id="audience">Who we work with</h2>
+      <ul class="list">
+        <li class="item">
+          <strong>Growing technology teams</strong>
+          <span>Improving security, structure and automation as you move beyond an initial cloud setup.</span>
+        </li>
+        <li class="item">
+          <strong>Smaller organisations modernising infrastructure</strong>
+          <span>Increasing resilience, cost control and operational clarity without enterprise complexity.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="who we are">
+      <h2 id="who">Who we are</h2>
+      <p>
+        IOGate was founded to provide senior-level cloud expertise focused on the outcome.
+        Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.
+      </p>
+      <ul class="bullets">
+        <li>We intentionally limit concurrent engagements to maintain direct senior involvement and delivery quality.</li>
+        <li>Security, cost control and operational resilience are built in by design — not added later.</li>
+        <li>We prioritise clean handover: documentation, sensible defaults and environments your team can operate.</li>
+      </ul>
+    </section>
+
+    <div class="cta" aria-label="call to action">
+      If you're building or scaling your cloud platform, let’s have a conversation.
+      Email <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a> to arrange an initial introduction.
+    </div>
+
+    <footer>
+      <span>© <span id="y"></span> iogate</span>
+      <span class="links">
+        <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a>
+      </span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
