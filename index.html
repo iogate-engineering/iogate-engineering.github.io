@@ -1,22 +1,16 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>iogate</title>
-  <meta name="description" content="IOGate — secure cloud foundations, built properly. AWS-led, Azure-capable." />
+  <meta name="description" content="IOGate — secure cloud foundations, built properly with AWS or Azure." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
   <main class="wrap">
     <h1 class="logo"><span class="io">io</span>gate</h1>
-
-    <p class="tagline">
-      Secure cloud foundations, built properly — primarily on AWS, with experience across Azure.
-      We design and implement production-ready environments with security, cost control and long-term scalability built in from day one.
-    </p>
 
     <nav class="nav" aria-label="navigation">
       <a href="./index.html" aria-current="page"><span class="dot"></span> Home</a>
@@ -27,28 +21,68 @@
     </nav>
 
     <div class="meta" aria-label="our focuses">
-      <span class="pill">UK • Private sector</span>
-      <span class="pill">AWS-led • Azure-capable</span>
+      <span class="pill">Private sector</span>
+      <span class="pill">AWS • Azure</span>
+      <span class="pill">Senior-led</span>
       <span class="pill">Secure by design</span>
-      <span class="pill">Focused engagements • Senior-led</span>
+      <span class="pill">Focused engagements</span>
     </div>
 
-    <section class="section" aria-labelledby="who we work with">
-      <h2 id="audience">Who we work with</h2>
-      <ul class="list">
-        <li class="item">
-          <strong>Growing technology teams</strong>
-          <span>Improving security, structure and automation as you move beyond an initial cloud setup.</span>
-        </li>
-        <li class="item">
-          <strong>Smaller organisations modernising infrastructure</strong>
-          <span>Increasing resilience, cost control and operational clarity without enterprise complexity.</span>
-        </li>
-      </ul>
+
+<p class="tagline">
+  Secure cloud foundations for teams that need to 
+  <span class="rotator" aria-label="Adapt, Scale, Innovate">
+    <span class="rotator__word" aria-hidden="true">Adapt</span>
+</p>
+
+<p class="tagline">
+  We design and implement production-ready environments with security, cost control and long-term scalability built in from day one.
+</p>
+
+    <section class="section" aria-labelledby="who-we-work-with">
+      <h2 id="who-we-work-with">Who we work with</h2>
+      <p class="section-intro">
+  We partner with ambitious teams building serious cloud platforms.
+</p>
+
+      <div class="tile-grid" role="list">
+        <a class="tile" role="listitem" href="./who-startups.html">
+          <div class="tile-image">
+            <img src="./img/who-startups.png" alt="Early-stage startup teams working together" />
+          </div>
+          <div class="tile-body">
+            <p class="tile-kicker">Profile</p>
+            <h3 class="tile-title">Early-stage startups</h3>
+            <p class="tile-desc">Launching or stabilising production without creating long-term infrastructure debt.</p>
+          </div>
+        </a>
+
+        <a class="tile" role="listitem" href="./who-growing-teams.html">
+          <div class="tile-image">
+            <img src="./img/who-growing-teams.png" alt="Growing technology teams scaling delivery and operations" />
+          </div>
+          <div class="tile-body">
+            <p class="tile-kicker">Profile</p>
+            <h3 class="tile-title">Growing technology teams</h3>
+            <p class="tile-desc">Adding structure, security and automation as complexity increases.</p>
+          </div>
+        </a>
+
+        <a class="tile" role="listitem" href="./who-modernising-orgs.html">
+          <div class="tile-image">
+            <img src="./img/who-modernising.png" alt="Smaller organisations modernising cloud and operations" />
+          </div>
+          <div class="tile-body">
+            <p class="tile-kicker">Profile</p>
+            <h3 class="tile-title">Smaller organisations</h3>
+            <p class="tile-desc">Modernising environments with better resilience, cost control and operational clarity.</p>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section class="section" aria-labelledby="who we are">
-      <h2 id="who">Who we are</h2>
+    <section class="section" aria-labelledby="who-we-are">
+      <h2 id="who-we-are">Who we are</h2>
       <p>
         IOGate was founded to provide senior-level cloud expertise focused on the outcome.
         Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.
@@ -76,5 +110,35 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  <script>
+  // keep it accurate without editing the file yearly
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Rotating words in hero
+  (function(){
+    const words = ["Adapt", "Scale", "Innovate"];
+    const el = document.querySelector(".rotator__word");
+    if (!el) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      el.textContent = words[0];
+      return;
+    }
+
+    let i = 0;
+    const displayMs = 1600;   // time each word stays visible
+    const fadeMs = 320;       // should match CSS transition
+
+    setInterval(() => {
+      el.classList.add("is-fading");
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        el.textContent = words[i];
+        el.classList.remove("is-fading");
+      }, fadeMs);
+    }, displayMs);
+  })();
+</script>
 </body>
 </html>
