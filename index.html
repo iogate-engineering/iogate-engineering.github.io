@@ -3,145 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iogate</title>
-  <meta name="description" content="IOGate — secure cloud foundations, built properly with AWS or Azure." />
-  <link rel="stylesheet" href="./styles.css" />
+  <title>iogate | Secure Cloud and Platform Engineering</title>
+  <meta
+    name="description"
+    content="iogate helps organisations design, build, and strengthen secure cloud platforms, delivery foundations, and operational capabilities that support sustainable growth."
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <main class="wrap">
-    <h1 class="logo"><span class="io">io</span>gate</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="iogate home">
+        <span class="brand-icon" aria-hidden="true"></span>
+        <span><span class="brand-io">io</span><span class="brand-gate">gate</span></span>
+      </a>
 
-    <nav class="nav" aria-label="navigation">
-      <a href="./index.html" aria-current="page"><span class="dot"></span> Home</a>
-      <a href="./services.html">Services</a>
-      <a href="./approach.html">Approach</a>
-      <a href="./about.html">About</a>
-      <a href="./contact.html">Contact</a>
-    </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">
+        Menu
+      </button>
 
-    <div class="meta" aria-label="our focuses">
-      <span class="pill">Private sector</span>
-      <span class="pill">AWS • Azure</span>
-      <span class="pill">Senior-led</span>
-      <span class="pill">Secure by design</span>
-      <span class="pill">Focused engagements</span>
+      <nav class="nav" id="site-nav">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">Why iogate</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-
-<p class="tagline">
-  Secure cloud foundations for teams that need to 
-  <span class="rotator" aria-label="Adapt, Scale, Innovate">
-    <span class="rotator__word" aria-hidden="true">Adapt</span>
-</p>
-
-<p class="tagline">
-  We design and implement production-ready environments with security, cost control and long-term scalability built in from day one.
-</p>
-
-    <section class="section" aria-labelledby="who-we-work-with">
-      <h2 id="who-we-work-with">Who we work with</h2>
-      <p class="section-intro">
-  We partner with ambitious teams building serious cloud platforms.
-</p>
-
-      <div class="tile-grid" role="list">
-        <a class="tile" role="listitem" href="./index.html">
-        <!-- <a class="tile" role="listitem" href="./who-startups.html"> -->
-          <div class="tile-image">
-            <img src="./img/who-startups.png" alt="Early-stage startup teams working together" />
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Secure cloud and platform engineering</div>
+          <h1>Cloud foundations that help you grow and move fast with confidence.</h1>
+          <p>
+            iogate helps organisations design, build, and strengthen secure cloud platforms,
+            delivery foundations, and operational capabilities that support sustainable growth.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="#contact">Book a discovery call</a>
+            <a class="button button-secondary" href="#services">Explore services</a>
           </div>
-          <div class="tile-body">
-            <p class="tile-kicker">Profile</p>
-            <h3 class="tile-title">Early-stage startups</h3>
-            <p class="tile-desc">Launching or stabilising production without creating long-term infrastructure debt.</p>
+          <div class="trust-grid">
+            <div class="trust-card">Security-first delivery approach</div>
+            <div class="trust-card">AWS and Azure platform experience</div>
+            <div class="trust-card">Cloud foundations for regulated environments</div>
+            <div class="trust-card">Automation-led engineering mindset</div>
           </div>
-        </a>
+        </div>
 
-        <a class="tile" role="listitem" href="./index.html">
-        <!-- <a class="tile" role="listitem" href="./who-growing-teams.html"> -->
-          <div class="tile-image">
-            <img src="./img/who-growing-teams.png" alt="Growing technology teams scaling delivery and operations" />
+        <div class="visual-card" aria-hidden="true">
+          <div class="portal-ring"></div>
+          <div class="portal-core"></div>
+          <div class="visual-note">
+            <strong>Practical cloud delivery, not vague transformation promises.</strong>
+            <p>
+              Architecture, platforms, automation, security, and cost control aligned to real business outcomes.
+            </p>
           </div>
-          <div class="tile-body">
-            <p class="tile-kicker">Profile</p>
-            <h3 class="tile-title">Growing technology teams</h3>
-            <p class="tile-desc">Adding structure, security and automation as complexity increases.</p>
-          </div>
-        </a>
-
-        <a class="tile" role="listitem" href="./index.html">
-        <!-- <a class="tile" role="listitem" href="./who-modernising-orgs.html"> -->
-          <div class="tile-image">
-            <img src="./img/who-modernising.png" alt="Smaller organisations modernising cloud and operations" />
-          </div>
-          <div class="tile-body">
-            <p class="tile-kicker">Profile</p>
-            <h3 class="tile-title">Smaller organisations</h3>
-            <p class="tile-desc">Modernising environments with better resilience, cost control and operational clarity.</p>
-          </div>
-        </a>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="who-we-are">
-      <h2 id="who-we-are">Who we are</h2>
-      <p>
-        IOGate was founded to provide senior-level cloud expertise focused on the outcome.
-        Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.
-      </p>
-      <ul class="bullets">
-        <li>We intentionally limit concurrent engagements to maintain direct senior involvement and delivery quality.</li>
-        <li>Security, cost control and operational resilience are built in by design — not added later.</li>
-        <li>We prioritise clean handover: documentation, sensible defaults and environments your team can operate.</li>
-      </ul>
+    <section class="section" id="about">
+      <div class="container panel-grid-2">
+        <div class="panel">
+          <div class="kicker">Why iogate</div>
+          <p>IOGate was founded to provide senior-level cloud expertise focused on the outcome. Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.</p>
+        </div>
+        <div class="panel">
+          <div class="kicker">Who we work with</div>          
+          <p>We support startups launching production, growing technology teams introducing structure and automation as complexity increases, and smaller organisations modernising their environments to improve resilience, cost control and operational clarity..</p>
+        </div>
+        <!-- <div class="panel">
+          <p>The focus is on practical foundations that teams can own, support, and extend over time.</p>
+        </div> -->
+      </div>
     </section>
 
-    <div class="cta" aria-label="call to action">
-      If you're building or scaling your cloud platform, let’s have a conversation.
-      Email <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a> to arrange an initial introduction.
-    </div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-intro">
+          <div class="kicker">Services</div>
+          <h2>What iogate helps you build</h2>
+          <p>
+            A focused set of consulting and delivery services designed to strengthen cloud capability,
+            improve engineering flow, and reduce operational drag.
+          </p>
+        </div>
 
-    <footer>
-      <span>© <span id="y"></span> iogate</span>
-      <span class="links">
-        <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a>
-      </span>
-    </footer>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Proof of Concept Delivery</h3>
+            <p>Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform.</p>
+          </article>
+          <article class="service-card">
+            <h3>Platform Engineering</h3>
+            <p>Build practical internal platforms, landing zones, delivery pipelines, and developer workflows that teams can actually use.</p>
+          </article>
+          <article class="service-card">
+            <h3>DevOps &amp; Automation</h3>
+            <p>Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation.</p>
+          </article>
+          <article class="service-card">
+            <h3>Security Foundations</h3>
+            <p>Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles.</p>
+          </article>
+          <article class="service-card">
+            <h3>FinOps Readiness</h3>
+            <p>Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline.</p>
+          </article>
+          <article class="service-card">
+            <h3>AI Infrastructure Blueprint</h3>
+            <p>Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="approach">
+      <div class="container approach-grid">
+        <div class="section-intro">
+          <div class="kicker">Approach</div>
+          <h2>A simple delivery model that keeps work grounded and useful.</h2>
+          <p>
+            The aim is to avoid over-engineering and focus on the few foundations that make the biggest difference to delivery,
+            resilience, and long-term scale.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">1</div>
+            <div>
+              <h3>Assess</h3>
+              <p>Assess your current cloud, platform, and delivery capability.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-number">2</div>
+            <div>
+              <h3>Design</h3>
+              <p>Design a pragmatic target architecture and roadmap.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-number">3</div>
+            <div>
+              <h3>Build</h3>
+              <p>Build the core foundations with security and operability in mind.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-number">4</div>
+            <div>
+              <h3>Enable</h3>
+              <p>Enable your teams with tooling, documentation, and ways of working.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-number">5</div>
+            <div>
+              <h3>Optimise</h3>
+              <p>Optimise over time for resilience, cost, and delivery speed.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="positioning">
+          <div>
+            <div class="kicker">Positioning</div>
+            <h2>Platforms engineered for organisations that expect certainty.</h2>
+          </div>
+          <a class="button button-primary" href="#contact">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="kicker">Contact</div>
+          <h2>Let’s discuss what you need to build next.</h2>
+          <!-- <p>
+            Whether you need a cloud foundation review, a platform roadmap, or support shaping a secure operating model,
+            iogate can help define a pragmatic next step.
+          </p> -->
+          <div class="contact-meta">
+            <div>Email: <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a></div>
+            <div>UK-based cloud and platform engineering consultancy</div>
+          </div>
+        </div>
+
+        <div class="form-panel">
+          <form class="form-grid" action="mailto:info@iogate.co.uk" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your name" />
+            <input type="email" name="email" placeholder="Your email" />
+            <input type="text" name="company" placeholder="Company" />
+            <textarea name="message" placeholder="How can iogate help?"></textarea>
+            <button class="button button-primary" type="submit">Send enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-  <script>
-  // keep it accurate without editing the file yearly
-  document.getElementById("y").textContent = new Date().getFullYear();
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> iogate. All rights reserved.</div>
+  </footer>
 
-  // Rotating words in hero
-  (function(){
-    const words = ["Adapt", "Scale", "Innovate"];
-    const el = document.querySelector(".rotator__word");
-    if (!el) return;
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('site-nav');
+    const year = document.getElementById('year');
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) {
-      el.textContent = words[0];
-      return;
+    if (year) {
+      year.textContent = new Date().getFullYear();
     }
 
-    let i = 0;
-    const displayMs = 1600;   // time each word stays visible
-    const fadeMs = 320;       // should match CSS transition
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
 
-    setInterval(() => {
-      el.classList.add("is-fading");
-      setTimeout(() => {
-        i = (i + 1) % words.length;
-        el.textContent = words[i];
-        el.classList.remove("is-fading");
-      }, fadeMs);
-    }, displayMs);
-  })();
-</script>
+      siteNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
