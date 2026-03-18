@@ -1,1 +1,0 @@
-# iogate-engineering.github.io
