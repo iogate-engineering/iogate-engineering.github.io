@@ -369,6 +369,7 @@ section.section {
 .panel p,
 .section-intro p,
 .service-card p,
+.experience-card p,
 .step p,
 .contact-panel p,
 .contact-meta,
@@ -394,10 +395,113 @@ section.section {
   padding: 2rem;
 }
 
+.panel h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+}
+
+.panel .panel-followup {
+  margin-top: 1rem;
+}
+
+.founder-meta {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.founder-meta strong {
+  font-size: 1.05rem;
+}
+
+.founder-meta span {
+  color: var(--muted-2);
+  font-size: 0.94rem;
+}
+
+.team-heading {
+  color: #9defff;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.team-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.team-profile + .team-profile {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.team-profile {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.team-profile p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-card {
+  padding: 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(78, 163, 255, 0.07), var(--bg-soft));
+  box-shadow: var(--shadow);
+}
+
+.experience-card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.experience-label {
+  margin-bottom: 1rem;
+  color: #9defff;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.experience-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.experience-cta p {
+  max-width: 48rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.experience-cta strong {
+  color: var(--text);
 }
 
 .service-card {
@@ -603,6 +707,7 @@ textarea {
   .panel-grid-3,
   .panel-grid-2,
   .services-grid,
+  .experience-grid,
   .approach-grid,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -613,6 +718,11 @@ textarea {
   }
 
   .positioning {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-cta {
     flex-direction: column;
     align-items: flex-start;
   }
