@@ -343,6 +343,10 @@ section.section {
   padding: 2.2rem 0;
 }
 
+section[id] {
+  scroll-margin-top: 7.5rem;
+}
+
 .section-intro {
   max-width: 46rem;
   margin-bottom: 2rem;
