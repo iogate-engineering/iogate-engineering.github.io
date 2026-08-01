@@ -9,24 +9,28 @@
     content="iogate helps organisations design, build, and strengthen secure cloud platforms, delivery foundations, and operational capabilities that support sustainable growth."
   />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+  <link rel="icon" href="/images/favicon/favicon.ico">
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
 </head>
-
-<!-- Standard favicons -->
-<link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" href="/images/favicon/favicon.ico">
-
-<!-- Apple -->
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-
-<!-- Manifest -->
-<link rel="manifest" href="/images/favicon/site.webmanifest">
 <body>
   <header class="site-header">
     <div class="container header-inner">
     <a class="brand" href="#top" aria-label="iogate home">
-      <img src="images/iogate-logo.png" alt="" class="brand-icon-img" />
-      <img src="images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" />
+      <img src="images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+      <img src="images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
     </a>
 
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">
@@ -37,6 +41,7 @@
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
         <a href="#about">Why iogate</a>
+        <a href="articles/">Articles</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -65,11 +70,10 @@
         </div>
 
         <div class="visual-card" aria-hidden="true">
-          <img src="images/iogate-logo.png" alt="iogate logo" class="visual-logo" />
+          <img src="images/iogate-logo.png" alt="iogate logo" class="visual-logo" width="2315" height="1316" />
 
           <div class="visual-note">
           <strong>Continuous cloud delivery, not one-off transformation promises.</strong>
-          <p>
           <p>
             Architecture, platforms, automation, security, and cost control integrated into a cycle of build, optimise, and deliver.
           </p>
@@ -82,7 +86,7 @@
       <div class="container panel-grid-2">
         <div class="panel">
           <div class="kicker">Why iogate</div>
-          <p>IOGate was founded to provide senior-level cloud expertise focused on the outcome. Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.</p>
+          <p>iogate was founded to provide senior-level cloud expertise focused on the outcome. Our background spans secure networks, high-availability systems and delivery in high-trust and regulated environments — bringing structure, clarity and discipline to fast-moving organisations.</p>
         </div>
         <div class="panel">
           <div class="kicker">Who we work with</div>          
@@ -106,30 +110,42 @@
         </div>
 
         <div class="services-grid">
-          <article class="service-card">
-            <h3>Proof of Concept Delivery</h3>
-            <p>Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform.</p>
-          </article>
-          <article class="service-card">
-            <h3>Platform Engineering</h3>
-            <p>Build practical internal platforms, landing zones, delivery pipelines, and developer workflows that teams can actually use.</p>
-          </article>
-          <article class="service-card">
-            <h3>DevOps &amp; Automation</h3>
-            <p>Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation.</p>
-          </article>
-          <article class="service-card">
-            <h3>Security Foundations</h3>
-            <p>Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles.</p>
-          </article>
-          <article class="service-card">
-            <h3>FinOps Readiness</h3>
-            <p>Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline.</p>
-          </article>
-          <article class="service-card">
-            <h3>AI Infrastructure Blueprint</h3>
-            <p>Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely.</p>
-          </article>
+          <a href="articles/proof-of-concept-delivery.html" class="service-card-link">
+            <article class="service-card">
+              <h3>Proof of Concept Delivery</h3>
+              <p>Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform.</p>
+            </article>
+          </a>
+          <a href="articles/platform-engineering.html" class="service-card-link">
+            <article class="service-card">
+              <h3>Platform Engineering</h3>
+              <p>Build practical internal platforms, landing zones, delivery pipelines, and developer workflows that teams can actually use.</p>
+            </article>
+          </a>
+          <a href="articles/devops-and-automation.html" class="service-card-link">
+            <article class="service-card">
+              <h3>DevOps &amp; Automation</h3>
+              <p>Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation.</p>
+            </article>
+          </a>
+          <a href="articles/security-foundations.html" class="service-card-link">
+            <article class="service-card">
+              <h3>Security Foundations</h3>
+              <p>Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles.</p>
+            </article>
+          </a>
+          <a href="articles/finops-readiness.html" class="service-card-link">
+            <article class="service-card">
+              <h3>FinOps Readiness</h3>
+              <p>Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline.</p>
+            </article>
+          </a>
+          <a href="articles/ai-infrastructure-blueprint.html" class="service-card-link">
+            <article class="service-card">
+              <h3>AI Infrastructure Blueprint</h3>
+              <p>Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely.</p>
+            </article>
+          </a>
         </div>
       </div>
     </section>
@@ -202,10 +218,9 @@
         <div class="contact-panel">
           <div class="kicker">Contact</div>
           <h2>Let’s discuss what you need to build next.</h2>
-          <!-- <p>
-            Whether you need a cloud foundation review, a platform roadmap, or support shaping a secure operating model,
-            iogate can help define a pragmatic next step.
-          </p> -->
+          <p>
+            Whether you need a cloud foundation review, a platform roadmap, or help shaping a secure operating model — iogate can help define a pragmatic next step.
+          </p>
           <div class="contact-meta">
             <div>Email: <a href="mailto:info@iogate.co.uk">info@iogate.co.uk</a></div>
             <div>UK-based cloud and platform engineering consultancy</div>
@@ -213,11 +228,15 @@
         </div>
 
         <div class="form-panel">
-          <form class="form-grid" action="mailto:info@iogate.co.uk" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your name" />
-            <input type="email" name="email" placeholder="Your email" />
-            <input type="text" name="company" placeholder="Company" />
-            <textarea name="message" placeholder="How can iogate help?"></textarea>
+          <form class="form-grid" action="https://formspree.io/f/meevdgod" method="POST">
+            <label for="field-name" class="sr-only">Your name</label>
+            <input id="field-name" type="text" name="name" placeholder="Your name" />
+            <label for="field-email" class="sr-only">Your email</label>
+            <input id="field-email" type="email" name="email" placeholder="Your email" />
+            <label for="field-company" class="sr-only">Company</label>
+            <input id="field-company" type="text" name="company" placeholder="Company" />
+            <label for="field-message" class="sr-only">How can iogate help?</label>
+            <textarea id="field-message" name="message" placeholder="How can iogate help?"></textarea>
             <button class="button button-primary" type="submit">Send enquiry</button>
           </form>
         </div>
