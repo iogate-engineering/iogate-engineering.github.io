@@ -129,3 +129,11 @@ The current design is professional, credible, and appropriate for a secure cloud
 - Review the complete updated site at mobile and tablet widths, where longer copy may have the greatest effect.
 - Preserve the dark navy palette, blue/violet accents, typography, navigation, and overall technical character.
 - [x] Extend the existing ambient blue, violet, and cyan glow throughout the page using subtle alternating background gradients.
+- [x] Replace the repeated hero logo with a branded secure-platform SVG illustration.
+- [x] Add custom line-art graphics to the service and experience cards.
+- [x] Add faint orbital brand motifs behind selected sections.
+- [x] Connect the delivery approach with a continuous gradient path.
+- [x] Remove the continuous hero animation after visual review; retain only restrained interaction feedback elsewhere.
+- [x] Rework the graphical motif to use the original iogate mark rather than an approximate orbital ellipse.
+- [x] Remove the hero platform pyramid, routes, and nodes after visual review; retain the original iogate mark against the ambient glow.
+- [x] Increase the use of brand colour across primary actions, trust cards, content panels, service cards, experience cards, and contact panels.

@@ -44,6 +44,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   color: var(--text);
@@ -165,7 +166,7 @@ img {
   padding: 0.7rem 1rem;
   border: 1px solid rgba(139, 233, 255, 0.25);
   border-radius: 999px;
-  background: var(--bg-soft);
+  background: linear-gradient(135deg, rgba(78, 163, 255, 0.13), rgba(139, 92, 246, 0.1));
   color: #c8f5ff;
   font-size: 0.74rem;
   letter-spacing: 0.18em;
@@ -214,14 +215,14 @@ h1 {
 }
 
 .button-primary {
-  background: #fff;
-  color: #101828;
-  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #2563eb, #4f46e5 52%, #7c3aed);
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(78, 119, 255, 0.22);
 }
 
 .button-secondary {
-  border-color: rgba(255, 255, 255, 0.14);
-  background: var(--bg-soft);
+  border-color: rgba(139, 233, 255, 0.2);
+  background: linear-gradient(135deg, rgba(78, 163, 255, 0.08), rgba(255, 255, 255, 0.04));
   color: #fff;
 }
 
@@ -245,6 +246,26 @@ h1 {
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.94rem;
   line-height: 1.4;
+}
+
+.trust-card:nth-child(1) {
+  border-color: rgba(78, 163, 255, 0.14);
+  background: linear-gradient(135deg, rgba(49, 133, 252, 0.1), rgba(255, 255, 255, 0.025));
+}
+
+.trust-card:nth-child(2) {
+  border-color: rgba(139, 92, 246, 0.14);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 255, 255, 0.025));
+}
+
+.trust-card:nth-child(3) {
+  border-color: rgba(139, 233, 255, 0.14);
+  background: linear-gradient(135deg, rgba(139, 233, 255, 0.08), rgba(255, 255, 255, 0.025));
+}
+
+.trust-card:nth-child(4) {
+  border-color: rgba(116, 112, 255, 0.16);
+  background: linear-gradient(135deg, rgba(78, 163, 255, 0.08), rgba(139, 92, 246, 0.09));
 }
 
 .trust-card::before {
@@ -282,7 +303,10 @@ h1 {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 36px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+  background:
+    radial-gradient(circle at 70% 18%, rgba(139, 92, 246, 0.18), transparent 48%),
+    radial-gradient(circle at 25% 40%, rgba(78, 163, 255, 0.1), transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow-strong);
 }
 
@@ -305,16 +329,15 @@ h1 {
   z-index: 0;
 }
 
-.visual-logo {
+.visual-brand-mark {
   position: absolute;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center 5%;
-  transform: scale(1);
-  filter: drop-shadow(0 40px 100px rgba(0, 0, 0, 0.8));
+  top: 4%;
+  left: 50%;
+  z-index: 2;
+  width: 86%;
+  height: auto;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 14px 28px rgba(78, 163, 255, 0.24));
 }
 
 .visual-note {
@@ -322,7 +345,7 @@ h1 {
   left: 2rem;
   right: 2rem;
   bottom: 1.5rem;
-  z-index: 2;
+  z-index: 3;
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -344,7 +367,48 @@ h1 {
 
 /* Sections */
 section.section {
+  position: relative;
+  isolation: isolate;
   padding: 2.2rem 0;
+}
+
+section.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+#about::before,
+#services::before,
+#contact::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 36rem;
+  height: 21rem;
+  background: url("images/iogate-logo.png") center / contain no-repeat;
+  opacity: 0.045;
+  filter: drop-shadow(0 0 40px rgba(78, 163, 255, 0.28));
+  pointer-events: none;
+}
+
+#about::before {
+  top: 10%;
+  left: -22rem;
+  transform: rotate(-8deg);
+}
+
+#services::before {
+  top: 28%;
+  right: -21rem;
+  transform: rotate(12deg);
+  opacity: 0.04;
+  filter: drop-shadow(0 0 42px rgba(139, 92, 246, 0.3));
+}
+
+#contact::before {
+  bottom: 3%;
+  left: -18rem;
+  transform: rotate(-12deg);
 }
 
 section[id] {
@@ -401,6 +465,16 @@ section[id] {
 
 .panel {
   padding: 2rem;
+}
+
+#about .panel:first-child {
+  border-color: rgba(78, 163, 255, 0.16);
+  background: linear-gradient(145deg, rgba(49, 133, 252, 0.09), rgba(255, 255, 255, 0.035) 55%);
+}
+
+#about .panel:last-child {
+  border-color: rgba(139, 92, 246, 0.16);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.085), rgba(255, 255, 255, 0.035) 55%);
 }
 
 .panel h2 {
@@ -470,6 +544,8 @@ section[id] {
 }
 
 .experience-card {
+  position: relative;
+  overflow: hidden;
   padding: 1.8rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -477,13 +553,83 @@ section[id] {
   box-shadow: var(--shadow);
 }
 
+.experience-card:nth-child(1) {
+  border-color: rgba(78, 163, 255, 0.18);
+  background: linear-gradient(150deg, rgba(49, 133, 252, 0.12), rgba(255, 255, 255, 0.035) 65%);
+}
+
+.experience-card:nth-child(2) {
+  border-color: rgba(139, 92, 246, 0.18);
+  background: linear-gradient(150deg, rgba(139, 92, 246, 0.12), rgba(255, 255, 255, 0.035) 65%);
+}
+
+.experience-card:nth-child(3) {
+  border-color: rgba(139, 233, 255, 0.16);
+  background: linear-gradient(150deg, rgba(63, 190, 220, 0.1), rgba(255, 255, 255, 0.035) 65%);
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1.6rem;
+  left: 1.6rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--blue), var(--violet), transparent);
+  opacity: 0.7;
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.experience-art {
+  position: relative;
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(139, 233, 255, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(78, 163, 255, 0.11), rgba(139, 92, 246, 0.08));
+  color: var(--cyan);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.experience-art::before,
+.service-art::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 70%;
+  background: url("images/iogate-logo.png") center / contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.experience-art svg {
+  position: relative;
+  z-index: 1;
+  width: 29px;
+  height: 29px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .experience-card h3 {
+  min-height: 2.9em;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
 }
 
 .experience-label {
-  margin-bottom: 1rem;
   color: #9defff;
   font-size: 0.72rem;
   letter-spacing: 0.14em;
@@ -513,8 +659,68 @@ section[id] {
 }
 
 .service-card {
+  position: relative;
+  overflow: hidden;
   padding: 1.8rem;
   transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.service-card-link:nth-child(3n + 1) .service-card {
+  border-color: rgba(78, 163, 255, 0.16);
+  background: linear-gradient(145deg, rgba(49, 133, 252, 0.09), rgba(255, 255, 255, 0.035) 58%);
+}
+
+.service-card-link:nth-child(3n + 2) .service-card {
+  border-color: rgba(139, 92, 246, 0.16);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.09), rgba(255, 255, 255, 0.035) 58%);
+}
+
+.service-card-link:nth-child(3n) .service-card {
+  border-color: rgba(139, 233, 255, 0.14);
+  background: linear-gradient(145deg, rgba(67, 185, 218, 0.08), rgba(255, 255, 255, 0.035) 58%);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  right: -4rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78, 163, 255, 0.1), transparent 68%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.service-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1.35rem;
+  border: 1px solid rgba(139, 233, 255, 0.16);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(78, 163, 255, 0.12), rgba(139, 92, 246, 0.08));
+  color: var(--cyan);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 28px rgba(3, 7, 18, 0.2);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  overflow: hidden;
+}
+
+.service-art svg {
+  position: relative;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .service-card-link {
@@ -528,9 +734,22 @@ section[id] {
   height: 100%;
 }
 
-.service-card:hover {
+.service-card-link:hover .service-card,
+.service-card-link:focus-visible .service-card {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.07);
+  background: linear-gradient(145deg, rgba(78, 163, 255, 0.13), rgba(139, 92, 246, 0.09));
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover .service-art {
+  transform: translateY(-2px) rotate(-2deg);
+  border-color: rgba(139, 233, 255, 0.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 16px 34px rgba(49, 133, 252, 0.12);
 }
 
 .service-card h3,
@@ -547,11 +766,27 @@ section[id] {
 }
 
 .steps {
+  position: relative;
   display: grid;
   gap: 1rem;
 }
 
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 2.9rem;
+  bottom: 2.9rem;
+  left: calc(1.4rem + 25px);
+  z-index: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--blue), var(--violet), var(--cyan));
+  box-shadow: 0 0 18px rgba(78, 163, 255, 0.3);
+}
+
 .step {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 52px 1fr;
   gap: 1rem;
@@ -565,8 +800,9 @@ section[id] {
   width: 52px;
   height: 52px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--blue-strong), var(--violet));
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   font-weight: 800;
+  box-shadow: 0 0 24px rgba(78, 163, 255, 0.18);
 }
 
 .positioning {
@@ -593,6 +829,16 @@ section[id] {
 .contact-panel,
 .form-panel {
   padding: 2rem;
+}
+
+.contact-panel {
+  border-color: rgba(78, 163, 255, 0.16);
+  background: linear-gradient(145deg, rgba(49, 133, 252, 0.09), rgba(255, 255, 255, 0.035) 60%);
+}
+
+.form-panel {
+  border-color: rgba(139, 92, 246, 0.16);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.085), rgba(255, 255, 255, 0.035) 60%);
 }
 
 .contact-meta {
@@ -734,6 +980,10 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .experience-card h3 {
+    min-height: 0;
+  }
 }
 
 /* Mobile */
@@ -796,9 +1046,9 @@ textarea {
     min-height: 26rem;
   }
 
-  .visual-logo {
-    object-position: center 9%;
-    transform: scale(1.05);
+  .visual-brand-mark {
+    top: 6%;
+    width: 92%;
   }
 
   .visual-card::before {
@@ -823,5 +1073,20 @@ textarea {
     right: 1rem;
     bottom: 1rem;
     padding: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .service-card,
+  .service-card::before,
+  .service-art,
+  .visual-brand-mark {
+    transition: none;
+    animation: none;
   }
 }
