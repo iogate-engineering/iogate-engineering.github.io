@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proof of Concept Delivery | iogate</title>
   <meta name="description" content="Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform." />
-  <link rel="stylesheet" href="../styles.css?v=13" />
+  <link rel="stylesheet" href="../styles.css?v=17" />
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
-  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-  <link rel="icon" href="/images/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="iogate home">
-        <img src="/images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
-        <img src="/images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
+      <a class="brand" href="../index.html" aria-label="iogate home">
+        <img src="../images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+        <img src="../images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
       </a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">Menu</button>
       <nav class="nav" id="site-nav">
-        <a href="/#services">Services</a>
-        <a href="/#approach">Approach</a>
-        <a href="/#about">Why iogate</a>
-        <a href="/#experience">Experience</a>
-        <a href="/#contact">Contact</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#about">Why iogate</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -35,7 +35,7 @@
   <main>
     <section class="hero" style="padding: 4rem 0 2rem;">
       <div class="container">
-        <a href="/articles/" class="eyebrow">&larr; All articles</a>
+        <a href="index.html" class="eyebrow">&larr; All articles</a>
         <h1 style="max-width: 24ch;">Proof of Concept Delivery</h1>
         <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
           Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform.
@@ -48,7 +48,7 @@
 
         <h2>How AWS Cloud Can Accelerate Proof of Concept Delivery</h2>
 
-        <img src="/images/poc.png" alt="Proof of Concept delivery process" class="article-img" width="1122" height="1402" />
+        <img src="../images/poc.png" alt="Proof of Concept delivery process" class="article-img" width="1122" height="1402" />
 
         <p>
           A Proof of Concept, or PoC, is about answering one question quickly: <strong>can this idea work well enough to justify further investment?</strong> AWS is well suited to PoC delivery because it allows teams to build, test, measure, and discard solutions without committing to long procurement cycles, permanent infrastructure, or large upfront costs.
@@ -78,6 +78,42 @@
         <p>
           For organisations experimenting with data, AI, automation, web applications, integrations, or modernisation, AWS can significantly reduce the time between idea and evidence. A team can build a representative solution, test it with realistic data, gather feedback, estimate costs, and decide whether to proceed, pivot, or stop. That makes the PoC a lower-risk investment rather than a speculative project.
         </p>
+
+        <section class="poc-examples" aria-labelledby="poc-examples-title">
+          <h2 id="poc-examples-title">Public examples of AWS PoCs that progressed</h2>
+          <p>
+            The following results are taken from public AWS customer stories. Each started with a deliberately scoped experiment and used the evidence it produced to guide a larger production decision.
+          </p>
+
+          <div class="poc-example-grid">
+            <article class="poc-example-card">
+              <div class="poc-example-label">Robotics and edge computing</div>
+              <h3>ST Engineering</h3>
+              <p>
+                ST Engineering worked with AWS Envision Engineering on a four-month PoC for a cloud-based robotic fleet management system. It adopted AWS IoT Greengrass, connected different robots through their APIs, and went on to replace on-premises infrastructure with a platform that could scale without purchasing and installing more servers.
+              </p>
+              <a href="https://aws.amazon.com/solutions/case-studies/st-engineering-case-study/" target="_blank" rel="noopener">Read the AWS customer story <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="poc-example-card">
+              <div class="poc-example-label">Secure content delivery</div>
+              <h3>Cognitran</h3>
+              <p>
+                Cognitran built a secure content-delivery PoC with AWS Professional Services under a three-month deadline. After customer approval, the production cutover completed with zero downtime and the resulting CloudFront-based service delivered 99.99% uptime. Cognitran then added the system to its SaaS offering as a new revenue stream.
+              </p>
+              <a href="https://aws.amazon.com/solutions/case-studies/cognitran-cloudfront-case-study/" target="_blank" rel="noopener">Read the AWS customer story <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="poc-example-card">
+              <div class="poc-example-label">Generative AI</div>
+              <h3>NewDay</h3>
+              <p>
+                NewDay turned a hackathon idea into a focused Amazon Bedrock PoC. A three-person team ran eight experiment cycles in ten weeks, progressed to a ten-agent pilot, and improved accuracy to more than 90%. AWS reported executive approval for production, rollout to more than 150 agents, and a reduction in answer retrieval time from around 90 seconds to 4 seconds.
+              </p>
+              <a href="https://aws.amazon.com/blogs/machine-learning/newday-builds-a-generative-ai-based-customer-service-agent-assist-with-over-90-accuracy/" target="_blank" rel="noopener">Read the AWS customer story <span aria-hidden="true">&rarr;</span></a>
+            </article>
+          </div>
+        </section>
 
         <p>
           Used properly, AWS does not just make PoCs faster. It makes them more disciplined. It gives teams the tools to validate value, expose technical risk early, estimate future cost, and create a foundation that can either be safely retired or developed into a production-ready solution.
