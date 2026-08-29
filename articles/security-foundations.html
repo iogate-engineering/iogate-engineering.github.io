@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Foundations | iogate</title>
+  <meta name="description" content="Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles." />
+  <link rel="stylesheet" href="../styles.css?v=17" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="iogate home">
+        <img src="../images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+        <img src="../images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">Menu</button>
+      <nav class="nav" id="site-nav">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#about">Why iogate</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 4rem 0 2rem;">
+      <div class="container">
+        <a href="index.html" class="eyebrow">&larr; All articles</a>
+        <h1 style="max-width: 24ch;">Security Foundations</h1>
+        <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
+          Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-body">
+        <h2>Security Foundations: Building Guardrails Before Growth</h2>
+
+        <p>
+          Cloud security is strongest when it is designed into the environment before individual workloads arrive. A secure foundation establishes how people authenticate, how accounts are separated, where logs are collected, which configurations are permitted, how data is protected, and how the organisation will respond when something unexpected occurs.
+        </p>
+
+        <h3>Begin with ownership and risk</h3>
+        <p>
+          Security controls should reflect the systems and data they protect. Start by identifying workload owners, data sensitivity, availability requirements, regulatory obligations, and credible threats. This creates a basis for proportionate decisions instead of applying the same controls blindly to every environment.
+        </p>
+        <p>
+          AWS operates security <em>of</em> the cloud, while customers remain responsible for security <em>in</em> the cloud. The exact boundary changes with the service model, but identity, configuration, data handling, and workload behaviour always require deliberate customer decisions.
+        </p>
+
+        <h3>Establish a strong identity foundation</h3>
+        <p>
+          Human access should come through a central identity provider with multi-factor authentication and short-lived credentials. Workloads should use roles rather than embedded access keys. Permissions should be granted according to job and workload needs, with separation between routine administration and emergency access.
+        </p>
+        <p>
+          Least privilege is not a one-time configuration. Permissions should be reviewed against actual use, reduced when no longer required, and removed promptly when people or services change role. Sensitive actions need traceable approval and logging.
+        </p>
+
+        <h3>Use account boundaries and a governed landing zone</h3>
+        <p>
+          A multi-account structure limits blast radius and separates production, development, security, logging, and shared services. AWS Control Tower and AWS Organizations can provide a landing-zone structure, central identity integration, account baselines, and preventive or detective controls. Service control policies can establish boundaries that individual workload administrators cannot override.
+        </p>
+        <p>
+          Account creation should be automated. Every new account should begin with known logging, security services, network expectations, ownership metadata, and cost controls rather than relying on a later clean-up exercise.
+        </p>
+
+        <h3>Make activity visible</h3>
+        <p>
+          Security teams cannot investigate what was never recorded. Organisation-wide API activity, configuration changes, authentication events, network signals, and relevant application logs should be sent to controlled locations with appropriate retention and access protection. Time synchronization, consistent formats, and clear ownership make those records useful during an incident.
+        </p>
+        <p>
+          Detection should cover both unwanted configuration and unusual behaviour. AWS Config, CloudTrail, GuardDuty, Security Hub, and workload-specific monitoring can provide complementary signals, but alerts need prioritisation and a defined response path. A large volume of unowned findings is not an effective detection capability.
+        </p>
+
+        <h3>Protect data throughout its lifecycle</h3>
+        <p>
+          Data should be classified so that encryption, access, retention, backup, and deletion controls match its sensitivity. Encryption at rest and in transit is a baseline, but key management and access paths matter just as much. Teams should know where sensitive data is stored, how it moves, who can retrieve it, and how recovery is tested.
+        </p>
+
+        <h3>Automate controls as code</h3>
+        <p>
+          Repeatable security controls belong in version-controlled templates and delivery pipelines. Policy checks can identify risky infrastructure before deployment; automated baselines can enable logging and threat detection consistently; remediation workflows can handle well-understood conditions. This creates faster feedback and reduces the drift caused by manual configuration.
+        </p>
+
+        <h3>Prepare for the day controls fail</h3>
+        <p>
+          Prevention is not enough. Define incident roles, communication routes, evidence-access procedures, containment options, and recovery priorities before an event. Run scenario-based exercises and test emergency access, backups, and account isolation. The aim is not to predict every incident, but to make the organisation capable of making good decisions under pressure.
+        </p>
+
+        <h3>A practical foundation checklist</h3>
+        <ul>
+          <li>Central identity, multi-factor authentication, temporary credentials, and protected emergency access.</li>
+          <li>A documented multi-account model with automated account baselines and organisational guardrails.</li>
+          <li>Central logging, detection, alert ownership, and tested investigation access.</li>
+          <li>Data classification, encryption, key ownership, backup, retention, and recovery testing.</li>
+          <li>Infrastructure and security controls defined as code, reviewed, tested, and monitored for drift.</li>
+          <li>Incident response plans exercised against realistic scenarios.</li>
+        </ul>
+
+        <h3>Further reading</h3>
+        <ul>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/security.html" target="_blank" rel="noopener">AWS Well-Architected Security Pillar</a></li>
+          <li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/introduction.html" target="_blank" rel="noopener">AWS Security Reference Architecture</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/detection.html" target="_blank" rel="noopener">AWS guidance for detection</a></li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Need confidence in your AWS foundation?</h3>
+          <p>iogate can review identity, account structure, logging, guardrails, and recovery readiness, then turn the findings into a pragmatic improvement plan.</p>
+          <a class="button button-primary" href="../index.html#contact">Discuss security foundations</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> iogate. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('site-nav');
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      siteNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

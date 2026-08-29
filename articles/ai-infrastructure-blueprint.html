@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Infrastructure Blueprint | iogate</title>
+  <meta name="description" content="Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely." />
+  <link rel="stylesheet" href="../styles.css?v=17" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="iogate home">
+        <img src="../images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+        <img src="../images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">Menu</button>
+      <nav class="nav" id="site-nav">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#about">Why iogate</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 4rem 0 2rem;">
+      <div class="container">
+        <a href="index.html" class="eyebrow">&larr; All articles</a>
+        <h1 style="max-width: 24ch;">AI Infrastructure Blueprint</h1>
+        <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
+          Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-body">
+        <h2>AI Infrastructure Blueprint: From Experiment to Governed Workload</h2>
+
+        <p>
+          AI initiatives often begin with a compelling demonstration and then slow down when they meet production requirements. Real data is sensitive, model behaviour is probabilistic, inference cost changes with usage, and the system must be observable even when its output is not deterministic. An AI infrastructure blueprint defines the technical and operating foundations needed to move beyond isolated experiments safely.
+        </p>
+
+        <h3>Start with the decision, not the model</h3>
+        <p>
+          Define the user, business problem, expected value, and unacceptable outcome before choosing a model or platform. A useful scope includes measurable quality criteria, latency and availability needs, data sensitivity, human oversight, likely usage, and a cost envelope. It should also explain what happens when the system is uncertain or wrong.
+        </p>
+        <p>
+          Evaluation needs a representative ground-truth dataset. Public model benchmarks can inform an initial shortlist, but they cannot prove that a model performs well on an organisation’s terminology, documents, edge cases, or risk profile. Task-specific tests provide the evidence needed to compare options and decide whether the use case should progress.
+        </p>
+
+        <h3>Choose the simplest viable model strategy</h3>
+        <p>
+          Managed model APIs such as Amazon Bedrock can reduce the infrastructure required to experiment and operate foundation models. Amazon SageMaker AI provides broader capabilities for teams that need custom training, hosting, registries, and MLOps workflows. Self-hosting may be justified by model control, specialist hardware, data constraints, or economics at scale, but it also transfers more operational responsibility to the team.
+        </p>
+        <p>
+          Selection should compare quality, latency, context limits, regional availability, data-handling terms, resilience, and total cost. Larger models are not automatically better. A smaller model, retrieval step, deterministic rule, or conventional search service may meet the requirement with lower cost and simpler operations.
+        </p>
+
+        <h3>Treat data architecture as a first-class system</h3>
+        <p>
+          AI quality depends on the data available to the model and the controls applied to it. Teams need to know which sources are authoritative, how content is classified, who may access it, how quality is measured, and how changes are tracked. Data lineage and versioning support reproducibility when model behaviour changes.
+        </p>
+        <p>
+          Retrieval-augmented generation adds ingestion pipelines, chunking, embeddings, vector storage, access filtering, and freshness requirements. These components need the same design attention as the model. Retrieval should be evaluated for relevance and latency, and permissions must be enforced before sensitive context is supplied to a model.
+        </p>
+
+        <h3>Create secure, isolated environments</h3>
+        <p>
+          Experimentation should not mean unrestricted access. Separate development and production environments, use least-privilege roles, encrypt data and model artefacts, protect secrets, scan container images, and centralise activity logging. Private connectivity may be appropriate for sensitive workloads, and production data should only be available to approved workflows and people.
+        </p>
+        <p>
+          Generative AI also needs application-level controls. Input and output filtering, prompt-injection defenses, content policies, rate limits, and human review should reflect the use case. Amazon Bedrock Guardrails can support filtering and policy enforcement, but governance still requires documented ownership, testing, and escalation paths.
+        </p>
+
+        <h3>Version more than code</h3>
+        <p>
+          A reproducible AI release includes infrastructure, application code, model identifier, prompt templates, retrieval configuration, evaluation dataset, safety policy, and deployment parameters. These artefacts should move through automated pipelines with quality and security gates. Model or prompt changes can alter behaviour without changing application code, so they need the same release discipline.
+        </p>
+
+        <h3>Observe quality, performance, safety, and cost</h3>
+        <p>
+          Traditional metrics such as availability, latency, errors, and saturation remain essential, but they are not sufficient. AI workloads also need task-quality measures, retrieval relevance, token or compute usage, model and prompt versions, safety-filter outcomes, user feedback, and traces across agent or RAG workflows.
+        </p>
+        <p>
+          Monitoring should trigger a defined response. Teams need to know when to roll back a prompt, switch models, refresh a knowledge base, adjust capacity, or route a decision to a human. Production feedback can improve evaluation datasets, but it must be collected and governed carefully.
+        </p>
+
+        <h3>Design cost controls before scale</h3>
+        <p>
+          AI cost is shaped by model choice, prompt and response length, retrieval architecture, agent steps, concurrency, and hosting utilisation. Capture cost per request and per business outcome during the PoC. Set quotas, timeouts, stopping conditions, and budgets; test smaller models and caching where appropriate; and automatically stop idle experimentation resources.
+        </p>
+
+        <h3>A practical blueprint sequence</h3>
+        <ol>
+          <li>Define the use case, owner, success measures, risk boundaries, and human oversight.</li>
+          <li>Create a representative evaluation dataset and compare the simplest viable approaches.</li>
+          <li>Design governed data access, environment isolation, identity, encryption, and logging.</li>
+          <li>Automate infrastructure and release management for code, prompts, models, and retrieval assets.</li>
+          <li>Pilot with real users, monitor quality and cost, and require evidence before wider production rollout.</li>
+        </ol>
+
+        <h3>Further reading</h3>
+        <ul>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/generative-ai-lens/generative-ai-lifecycle.html" target="_blank" rel="noopener">AWS Generative AI Lens: Generative AI lifecycle</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/generative-ai-lens/data-architecture.html" target="_blank" rel="noopener">AWS Generative AI Lens: Data architecture</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/generative-ai-lens/operational-excellence.html" target="_blank" rel="noopener">AWS Generative AI Lens: Operational excellence</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/machine-learning-lens.html" target="_blank" rel="noopener">AWS Well-Architected Machine Learning Lens</a></li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Need a secure path from AI idea to production?</h3>
+          <p>iogate can help define the evaluation, data, security, platform, and operating controls needed for a focused AI workload.</p>
+          <a class="button button-primary" href="../index.html#contact">Discuss an AI infrastructure blueprint</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> iogate. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('site-nav');
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      siteNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
