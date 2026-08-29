@@ -5,10 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Articles | iogate</title>
   <meta name="description" content="Cloud and platform engineering articles from iogate." />
-  <link rel="stylesheet" href="../styles.css?v=17" />
+  <link rel="canonical" href="https://iogate-engineering.github.io/articles/" />
+  <meta property="og:title" content="Cloud and Platform Engineering Articles | iogate" />
+  <meta property="og:description" content="Practical guidance on AWS, platforms, automation, security, FinOps, proofs of concept, and AI infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iogate-engineering.github.io/articles/" />
+  <meta property="og:image" content="https://iogate-engineering.github.io/images/iogate-logo.png" />
+  <meta property="og:image:alt" content="iogate" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="../styles.css?v=23" />
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
-  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
   <link rel="icon" href="../images/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
@@ -33,11 +40,11 @@
   </header>
 
   <main>
-    <section class="hero" style="padding: 4rem 0 2rem;">
+    <section class="hero article-hero">
       <div class="container">
         <div class="eyebrow">Articles</div>
-        <h1 style="max-width: 24ch;">Cloud and platform engineering insights</h1>
-        <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
+        <h1>Cloud and platform engineering insights</h1>
+        <p class="article-lede">
           Practical perspectives on building secure, scalable cloud foundations.
         </p>
       </div>
@@ -88,26 +95,9 @@
   </main>
 
   <footer class="footer">
-    <div class="container">&copy; <span id="year"></span> iogate. All rights reserved.</div>
+    <div class="container footer-inner"><span>&copy; <span id="year"></span> iogate. All rights reserved.</span><a href="../privacy.html">Privacy notice</a></div>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const siteNav = document.getElementById('site-nav');
-    const year = document.getElementById('year');
-    if (year) year.textContent = new Date().getFullYear();
-    if (menuToggle && siteNav) {
-      menuToggle.addEventListener('click', function () {
-        const isOpen = siteNav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-      siteNav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          siteNav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  </script>
+  <script src="../site.js?v=1" defer></script>
 </body>
 </html>

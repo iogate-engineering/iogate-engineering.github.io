@@ -8,14 +8,21 @@
     name="description"
     content="Senior AWS, Kubernetes, and platform engineering for founders and growing technology teams building, launching, or scaling secure services."
   />
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="canonical" href="https://iogate-engineering.github.io/" />
+  <meta property="og:title" content="iogate | AWS and Kubernetes Engineering for Growing Teams" />
+  <meta property="og:description" content="Senior AWS, Kubernetes, and platform engineering for founders and growing technology teams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iogate-engineering.github.io/" />
+  <meta property="og:image" content="https://iogate-engineering.github.io/images/iogate-logo.png" />
+  <meta property="og:image:alt" content="iogate" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css?v=23" />
 
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
   <link rel="icon" href="/images/favicon/favicon.ico">
 
@@ -24,8 +31,20 @@
 
   <!-- Manifest -->
   <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "iogate",
+      "url": "https://iogate-engineering.github.io/",
+      "email": "info@iogate.co.uk",
+      "description": "Senior AWS, Kubernetes, and platform engineering for founders and growing technology teams.",
+      "areaServed": "Worldwide",
+      "knowsAbout": ["AWS", "Kubernetes", "Platform engineering", "DevOps", "Cloud security", "FinOps"]
+    }
+  </script>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container header-inner">
     <a class="brand" href="#top" aria-label="iogate home">
@@ -47,7 +66,7 @@
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -58,8 +77,8 @@
             to turn ideas into secure production services, modernise cloud environments, and build reliable delivery foundations.
           </p>
           <div class="button-row">
-            <a class="button button-secondary" href="#services">Explore services</a>            
-            <a class="button button-primary" href="#contact">Book a discovery call</a>
+            <a class="button button-secondary" href="#services">Explore services</a>
+            <a class="button button-primary" href="#contact">Discuss your project</a>
           </div>
           <div class="trust-grid">
             <div class="trust-card">Direct access to senior architects</div>
@@ -91,7 +110,7 @@
           <p class="panel-followup">Together, Sam and Mitch have delivered for the UK Ministry of Defence and within other sensitive environments where security, reliability, and operational discipline are essential.</p>
         </div>
         <div class="panel">
-          <div class="kicker">Who we work with</div>          
+          <div class="kicker">Who we work with</div>
           <p>We work with founders, startups, and smaller technology organisations worldwide. iogate is a strong fit when you need senior cloud and platform expertise to validate an idea, launch into production, modernise an AWS or Azure environment, or make delivery more secure and dependable—without first building a large internal platform team.</p>
           <p class="panel-followup">Every engagement is led directly by Sam and Mitch. When a project needs additional capacity or specialist knowledge, we can draw on a wider network of experienced associates.</p>
           <div class="founder-meta">
@@ -110,9 +129,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="panel">
-          <p>The focus is on practical foundations that teams can own, support, and extend over time.</p>
-        </div> -->
       </div>
     </section>
 
@@ -204,6 +220,10 @@
               </div>
               <h3>Proof of Concept Delivery</h3>
               <p>Rapidly design and build working prototypes that prove whether a technology or architecture can support your product or platform.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>Validating an idea before major investment</strong></div>
+                <div><span>You leave with</span><strong>A working prototype, evidence, and production roadmap</strong></div>
+              </div>
             </article>
           </a>
           <a href="articles/platform-engineering.html" class="service-card-link">
@@ -217,6 +237,10 @@
               </div>
               <h3>Platform Engineering</h3>
               <p>Build practical internal platforms, landing zones, delivery pipelines, and developer workflows that teams can actually use.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>Growing teams before delivery practices fragment</strong></div>
+                <div><span>You leave with</span><strong>A platform roadmap and first supported delivery path</strong></div>
+              </div>
             </article>
           </a>
           <a href="articles/devops-and-automation.html" class="service-card-link">
@@ -230,6 +254,10 @@
               </div>
               <h3>DevOps &amp; Automation</h3>
               <p>Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>Teams slowed by manual or unreliable releases</strong></div>
+                <div><span>You leave with</span><strong>Versioned pipelines, infrastructure patterns, and an automation backlog</strong></div>
+              </div>
             </article>
           </a>
           <a href="articles/security-foundations.html" class="service-card-link">
@@ -243,6 +271,10 @@
               </div>
               <h3>Security Foundations</h3>
               <p>Strengthen cloud posture with identity, guardrails, logging, configuration assurance, and resilient design principles.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>New or expanding AWS environments that need consistent controls</strong></div>
+                <div><span>You leave with</span><strong>An assessed baseline, guardrails, and prioritised remediation plan</strong></div>
+              </div>
             </article>
           </a>
           <a href="articles/finops-readiness.html" class="service-card-link">
@@ -256,6 +288,10 @@
               </div>
               <h3>FinOps Readiness</h3>
               <p>Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>Teams without clear spend ownership or forecasting</strong></div>
+                <div><span>You leave with</span><strong>An allocation model, reporting foundation, and action plan</strong></div>
+              </div>
             </article>
           </a>
           <a href="articles/ai-infrastructure-blueprint.html" class="service-card-link">
@@ -268,6 +304,10 @@
               </div>
               <h3>AI Infrastructure Blueprint</h3>
               <p>Lay the groundwork for secure data and AI workloads with the platforms, controls, and operating model needed to grow safely.</p>
+              <div class="service-offer">
+                <div><span>Best for</span><strong>Teams moving an AI experiment towards production</strong></div>
+                <div><span>You leave with</span><strong>An evaluated architecture, operating blueprint, and delivery roadmap</strong></div>
+              </div>
             </article>
           </a>
         </div>
@@ -352,16 +392,19 @@
         </div>
 
         <div class="form-panel">
-          <form class="form-grid" action="https://formspree.io/f/meevdgod" method="POST">
+          <form class="form-grid" action="https://formspree.io/f/meevdgod" method="POST" id="contactForm" aria-describedby="form-privacy">
             <label for="field-name" class="sr-only">Your name</label>
-            <input id="field-name" type="text" name="name" placeholder="Your name" />
+            <input id="field-name" type="text" name="name" placeholder="Your name" autocomplete="name" required />
             <label for="field-email" class="sr-only">Your email</label>
-            <input id="field-email" type="email" name="email" placeholder="Your email" />
+            <input id="field-email" type="email" name="email" placeholder="Your email" autocomplete="email" required />
             <label for="field-company" class="sr-only">Company</label>
-            <input id="field-company" type="text" name="company" placeholder="Company" />
+            <input id="field-company" type="text" name="company" placeholder="Company (optional)" autocomplete="organization" />
             <label for="field-message" class="sr-only">How can iogate help?</label>
-            <textarea id="field-message" name="message" placeholder="How can iogate help?"></textarea>
-            <button class="button button-primary" type="submit">Send enquiry</button>
+            <textarea id="field-message" name="message" placeholder="How can iogate help?" required></textarea>
+            <input class="form-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <p class="form-privacy" id="form-privacy">We’ll use these details only to respond to your enquiry. See our <a href="privacy.html">privacy notice</a>.</p>
+            <button class="button button-primary" type="submit" id="formSubmit">Send enquiry</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -369,31 +412,12 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> iogate. All rights reserved.</div>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> iogate. All rights reserved.</span>
+      <a href="privacy.html">Privacy notice</a>
+    </div>
   </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const siteNav = document.getElementById('site-nav');
-    const year = document.getElementById('year');
-
-    if (year) {
-      year.textContent = new Date().getFullYear();
-    }
-
-    if (menuToggle && siteNav) {
-      menuToggle.addEventListener('click', function () {
-        const isOpen = siteNav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-
-      siteNav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          siteNav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-  </script>
+  <script src="site.js?v=1" defer></script>
 </body>
 </html>
