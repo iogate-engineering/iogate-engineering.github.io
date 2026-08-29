@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinOps Readiness | iogate</title>
+  <meta name="description" content="Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline." />
+  <link rel="stylesheet" href="../styles.css?v=17" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="iogate home">
+        <img src="../images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+        <img src="../images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">Menu</button>
+      <nav class="nav" id="site-nav">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#about">Why iogate</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 4rem 0 2rem;">
+      <div class="container">
+        <a href="index.html" class="eyebrow">&larr; All articles</a>
+        <h1 style="max-width: 24ch;">FinOps Readiness</h1>
+        <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
+          Create visibility, ownership, and control over cloud spend so teams can scale without losing cost discipline.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-body">
+        <h2>FinOps Readiness: Turning Cloud Spend Into Engineering Feedback</h2>
+
+        <p>
+          FinOps is the operating practice of bringing engineering, finance, product, and leadership together to understand the cost and value of cloud technology. It is not simply a monthly cost-cutting exercise. A mature approach gives teams timely information, clear ownership, and the ability to make cost-aware decisions without slowing delivery.
+        </p>
+
+        <h3>Visibility comes before optimisation</h3>
+        <p>
+          A total AWS bill is not enough to guide action. Teams need to see cost by workload, environment, owner, product, and business purpose. That starts with an account structure and metadata model that reflect how the organisation operates. Cost and Usage Reports, Cost Explorer, Cost Categories, and allocation tags can then present spend in useful groupings.
+        </p>
+        <p>
+          Perfect allocation is rarely available on day one. Begin with a small mandatory set—such as owner, workload, environment, and cost centre—then measure coverage and improve it. Shared costs such as networking, observability, and platform services need an agreed allocation method so that they are visible without creating false precision.
+        </p>
+
+        <h3>Give cost an owner</h3>
+        <p>
+          Engineers influence architecture and resource use; finance understands budgets and reporting; product leaders decide which outcomes justify investment. FinOps connects these perspectives. Each material workload should have somebody accountable for reviewing its spend, explaining significant changes, and deciding whether optimisation work is worthwhile.
+        </p>
+        <p>
+          Showback can establish this behaviour before formal chargeback is needed. A regular report that connects cost to a named service and owner is often enough to reveal forgotten environments, oversized resources, duplicated data, or unclear ownership.
+        </p>
+
+        <h3>Budget and forecast collaboratively</h3>
+        <p>
+          Cloud forecasts should combine historical usage with planned product and architecture changes. Engineering can explain expected traffic, migrations, retention growth, or model usage; finance can align those estimates with budgets; product can test whether the expected value justifies the cost.
+        </p>
+        <p>
+          Forecasts are decision tools, not promises that usage will remain static. Variance thresholds and review routes should be agreed in advance so that teams can distinguish expected growth from a problem requiring action.
+        </p>
+
+        <h3>Detect unexpected spend early</h3>
+        <p>
+          Waiting for the invoice makes every response reactive. AWS Budgets can alert on actual or forecast thresholds, while AWS Cost Anomaly Detection can identify unusual changes in spend patterns. Alerts should be routed to the team able to investigate them and contain enough context to identify the account, service, region, or usage type involved.
+        </p>
+        <p>
+          Cost controls should also exist in delivery workflows. Infrastructure templates can require allocation tags, sandbox environments can have expiry policies, and unusually expensive resource types can require explicit approval. These controls are most useful when they prevent accidents while preserving a fast path for legitimate work.
+        </p>
+
+        <h3>Optimise in the right order</h3>
+        <p>
+          Remove resources that are no longer needed, schedule non-production capacity, and right-size workloads using observed demand. Review storage lifecycle, data transfer, logging retention, and managed-service configuration. Only after usage is understood should the organisation make longer-term pricing commitments such as Savings Plans or Reserved Instances.
+        </p>
+        <p>
+          Optimisation is continuous because workloads, AWS services, prices, and business priorities change. A one-off saving has limited value if the operating model allows waste to accumulate again.
+        </p>
+
+        <h3>Move from total cost to unit economics</h3>
+        <p>
+          The most useful question is often not “How much did AWS cost?” but “What did that spend produce?” Unit measures might include cost per customer, transaction, environment, deployment, model inference, or gigabyte processed. Tracking unit cost alongside reliability and product outcomes helps teams avoid optimisations that reduce spend but damage service quality or growth.
+        </p>
+
+        <h3>A practical first month</h3>
+        <ol>
+          <li>Identify the major accounts, workloads, owners, and current sources of billing data.</li>
+          <li>Define a minimum allocation standard and measure unallocated spend.</li>
+          <li>Create dashboards and regular reviews for engineering, finance, and product stakeholders.</li>
+          <li>Configure budget and anomaly alerts with named responders.</li>
+          <li>Prioritise a small number of measurable optimisation actions and record their effect.</li>
+        </ol>
+
+        <h3>Further reading</h3>
+        <ul>
+          <li><a href="https://framework.finops.org/framework/capabilities/allocation/" target="_blank" rel="noopener">FinOps Framework: Allocation</a></li>
+          <li><a href="https://www.finops.org/framework/capabilities/forecasting/" target="_blank" rel="noopener">FinOps Framework: Forecasting</a></li>
+          <li><a href="https://docs.aws.amazon.com/solutions/cloud-financial-management-on-aws/" target="_blank" rel="noopener">AWS Guidance for Cloud Financial Management</a></li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Need clearer ownership of cloud spend?</h3>
+          <p>iogate can establish the allocation, reporting, alerting, and engineering practices needed to turn AWS cost data into useful decisions.</p>
+          <a class="button button-primary" href="../index.html#contact">Discuss FinOps readiness</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> iogate. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('site-nav');
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      siteNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

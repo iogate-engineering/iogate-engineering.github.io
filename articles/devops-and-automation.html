@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps &amp; Automation | iogate</title>
+  <meta name="description" content="Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation." />
+  <link rel="stylesheet" href="../styles.css?v=17" />
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,700,800" />
+  <link rel="icon" type="image/svg+xml" href="../images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon/favicon-96x96.png">
+  <link rel="icon" href="../images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="iogate home">
+        <img src="../images/iogate-logo.png" alt="" class="brand-icon-img" width="2315" height="1316" />
+        <img src="../images/iogate-logo-header-text.png" alt="iogate" class="brand-text-img" width="3014" height="839" />
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" id="menuToggle">Menu</button>
+      <nav class="nav" id="site-nav">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#approach">Approach</a>
+        <a href="../index.html#about">Why iogate</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding: 4rem 0 2rem;">
+      <div class="container">
+        <a href="index.html" class="eyebrow">&larr; All articles</a>
+        <h1 style="max-width: 24ch;">DevOps &amp; Automation</h1>
+        <p style="margin-top: 1.5rem; color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 60ch;">
+          Reduce manual effort with CI/CD, infrastructure as code, environment standardisation, and operational automation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container article-body">
+        <h2>DevOps and Automation: Making Change Safer and More Routine</h2>
+
+        <p>
+          Despite how DevOps is frequently spoken about, it is not a job title, a toolchain, or a collection of scripts. It is a way of designing delivery so that small changes can move from idea to production with fast feedback, clear ownership, and controlled risk. Automation supports that model by turning repeated operational knowledge into versioned, testable workflows.
+        </p>
+
+        <h3>Replace hand-offs with a delivery system</h3>
+        <p>
+          Slow delivery is often caused less by coding time than by queues between teams. A change waits for an environment, a firewall rule, a manual test, a deployment window, or somebody with the right production access. Each hand-off adds delay and makes the outcome harder to predict.
+        </p>
+        <p>
+          A healthier model gives a team responsibility for building and operating its service while central specialists provide reusable controls and support. The workflow—from source control through testing, deployment, monitoring, and rollback—becomes visible and repeatable. People still make important decisions, but routine execution no longer depends on memory or privileged manual access.
+        </p>
+
+        <h3>CI/CD is a feedback system</h3>
+        <p>
+          Continuous integration checks whether a change can be safely combined with the rest of the codebase. Continuous delivery keeps that change in a deployable state. A useful pipeline therefore does more than compile code: it runs automated tests, validates infrastructure, checks dependencies and security policy, creates traceable artefacts, and promotes the same artefact through environments.
+        </p>
+        <p>
+          Pipeline stages should return clear feedback quickly. Fast unit and policy checks run early; slower integration and resilience tests run when the change has passed the cheaper checks. Production approvals should protect genuinely high-risk actions without turning every routine release into a ceremony.
+        </p>
+
+        <h3>Define infrastructure and operations as code</h3>
+        <p>
+          Infrastructure as Code replaces manually configured environments with reviewed definitions stored in version control. The same principle applies to dashboards, alerts, access policies, deployment configuration, and operational runbooks. Rebuilding an environment should be a controlled execution of known inputs, not an attempt to reproduce undocumented console changes.
+        </p>
+        <p>
+          This improves consistency and creates an audit trail, but it also changes how teams work. Infrastructure changes need code review, automated validation, environment promotion, and a recovery path. State, secrets, and provider permissions must be designed deliberately rather than treated as details of the chosen tool.
+        </p>
+
+        <h3>Prefer small, reversible changes</h3>
+        <p>
+          AWS Well-Architected guidance recommends frequent, small, reversible changes because they reduce blast radius and make recovery easier. Techniques such as rolling, blue/green, canary, and feature-flagged releases can separate deployment from full exposure. The right technique depends on the workload, but every service should have a tested answer to one question: what happens when this release is unhealthy?
+        </p>
+
+        <h3>Automate operations, not just deployments</h3>
+        <p>
+          Delivery automation creates speed; operational automation makes that speed sustainable. Standard health checks, service-level indicators, log correlation, alert routing, backup testing, certificate renewal, patching, and safe remediation all reduce the amount of work that arrives as an urgent manual task.
+        </p>
+        <p>
+          Automation should be observable. A failed automated action needs an owner, useful context, and a safe fallback. Otherwise the organisation has only replaced visible manual work with invisible failure modes.
+        </p>
+
+        <h3>Build security into the workflow</h3>
+        <p>
+          Security controls are most effective when they provide feedback before a risky change reaches production. Secret detection, dependency scanning, infrastructure policy checks, container scanning, and deployment guardrails can all be integrated into delivery pipelines. Exceptions should be explicit, time-bound, and reviewed rather than handled through undocumented bypasses.
+        </p>
+
+        <h3>A practical automation roadmap</h3>
+        <ol>
+          <li>Map the current path from writing code to production and identify its longest waits and most common failures.</li>
+          <li>Put application and infrastructure definitions under version control.</li>
+          <li>Automate one repeatable build, test, and deployment path end to end.</li>
+          <li>Add observability, rollback, and recovery checks before increasing release frequency.</li>
+          <li>Measure lead time, deployment frequency, failure rate, recovery time, and manual effort.</li>
+        </ol>
+
+        <h3>Further reading</h3>
+        <ul>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/devops-guidance/devops-guidance.html" target="_blank" rel="noopener">AWS Well-Architected DevOps Guidance</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/operational-excellence-pillar/welcome.html" target="_blank" rel="noopener">AWS Well-Architected Operational Excellence Pillar</a></li>
+          <li><a href="https://docs.aws.amazon.com/wellarchitected/2023-10-03/framework/oe-design-principles.html" target="_blank" rel="noopener">Operational excellence design principles</a></li>
+        </ul>
+
+        <div class="article-cta">
+          <h3>Where is manual work slowing your delivery?</h3>
+          <p>iogate can assess the current delivery path and implement focused automation that improves speed without weakening control.</p>
+          <a class="button button-primary" href="../index.html#contact">Discuss DevOps and automation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> iogate. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const siteNav = document.getElementById('site-nav');
+    const year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener('click', function () {
+        const isOpen = siteNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      siteNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          siteNav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
